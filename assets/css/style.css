@@ -1,0 +1,388 @@
+/* ==========================================================================
+   VARIABLES & DESIGN SYSTEM (Inspirado en Dark Minimalist / Apple Aesthetic)
+   ========================================================================== */
+:root {
+    --bg-main: #0a0c10;
+    --bg-card: #12151c;
+    --bg-card-hover: #181c26;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-muted: #8b949e;
+    --accent-color: #f3f4f6;
+    --accent-glow: rgba(255, 255, 255, 0.12);
+    --gold-accent: #d4af37;
+    
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & BADGES
+   ========================================================================== */
+.text-muted-custom {
+    color: var(--text-muted);
+}
+
+.text-italic-accent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: #e5e7eb;
+}
+
+.badge-custom {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.badge-tech {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    color: #d1d5db;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   HEADER & SEGMENTED PILL NAVIGATION (Réplica Imagen)
+   ========================================================================== */
+header {
+    background: rgba(10, 12, 16, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-pill-container {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    padding: 4px;
+    border-radius: 30px;
+    gap: 4px;
+}
+
+.pill-item {
+    color: var(--text-muted);
+    padding: 6px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.pill-item:hover, .pill-item.active {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.nav-link-custom {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.nav-link-custom:hover {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   HERO CONTAINER (macOS Card Aesthetic)
+   ========================================================================== */
+.main-wrapper {
+    margin-top: 90px;
+}
+
+.window-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+}
+
+.window-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.window-title {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+.window-body {
+    padding: 80px 20px 50px 20px;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.15;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn-custom-primary {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-custom-primary:hover {
+    background-color: #e5e7eb;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.btn-custom-secondary {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 10px 24px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.btn-custom-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   SECTIONS & CARDS
+   ========================================================================== */
+.section-padding {
+    padding: 100px 0;
+}
+
+.border-top-custom {
+    border-top: 1px solid var(--border-color);
+}
+
+.profile-img {
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    max-width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.info-box, .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.tech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px 20px;
+    border-radius: 14px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tech-card:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tech-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.color-java { color: #f89820; }
+.color-spring { color: #6db33f; }
+.color-html { color: #e34f26; }
+.color-js { color: #f7df1e; }
+.color-python { color: #3776ab; }
+.color-sql { color: #00758f; }
+.color-bootstrap { color: #7952b3; }
+.color-git { color: #f05032; }
+
+/* Timeline Experiencia */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+/* Projects Cards */
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.project-img-wrapper {
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.03);
+}
+
+.project-body {
+    padding: 24px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: #ffffff;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    box-shadow: none;
+}
+
+/* Back To Top Button */
+.btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--bg-card);
+    color: #ffffff;
+    border: 1px solid var(--border-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.btn-back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .window-body {
+        padding: 40px 15px 30px 15px;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+}

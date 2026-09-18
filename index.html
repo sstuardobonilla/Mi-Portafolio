@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sergio Stuardo Bonilla | Desarrollador Full Stack Java</title>
+    
+    <!-- Meta SEO & Open Graph -->
+    <meta name="description" content="Portafolio profesional de Sergio Stuardo Bonilla, Desarrollador Full Stack Java Trainee y Técnico Programador. Especialista en Java, Spring Boot, Python y bases de datos SQL.">
+    <meta property="og:title" content="Sergio Stuardo Bonilla - Portafolio Full Stack Java">
+    <meta property="og:description" content="Proyectos, habilidades y trayectoria en desarrollo de software web.">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar estilo Apple Floating Pill -->
+    <header class="fixed-top py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <!-- Brand Info -->
+            <div class="brand-group">
+                <a class="navbar-brand fw-bold m-0" href="#hero">Sergio Stuardo</a>
+                <span class="d-none d-sm-inline-block text-muted-custom fs-7 ms-2">| Full Stack Java Trainee</span>
+            </div>
+
+            <!-- Segmented Pill Control (Navegación Inspirada en la Imagen) -->
+            <nav class="nav-pill-container d-none d-lg-flex">
+                <a href="#hero" class="pill-item active">Inicio</a>
+                <a href="#sobre-mi" class="pill-item">Sobre Mí</a>
+                <a href="#habilidades" class="pill-item">Habilidades</a>
+                <a href="#experiencia" class="pill-item">Experiencia</a>
+                <a href="#proyectos" class="pill-item">Proyectos</a>
+                <a href="#contacto" class="pill-item">Contacto</a>
+            </nav>
+
+            <!-- Redes & CV Links -->
+            <div class="d-none d-md-flex align-items-center gap-3">
+                <a href="https://www.linkedin.com/in/sergio-stuardo-bonilla-933430260/" target="_blank" class="nav-link-custom">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square fs-8"></i></a>
+                <a href="https://github.com/sstuardobonilla" target="_blank" class="nav-link-custom">GitHub <i class="fa-solid fa-arrow-up-right-from-square fs-8"></i></a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="navbar-nav gap-3 fs-5">
+                <li class="nav-item"><a class="nav-link mobile-link" href="#hero">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link mobile-link" href="#sobre-mi">Sobre Mí</a></li>
+                <li class="nav-item"><a class="nav-link mobile-link" href="#habilidades">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link mobile-link" href="#experiencia">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link mobile-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link mobile-link" href="#formacion">Formación</a></li>
+                <li class="nav-item"><a class="nav-link mobile-link" href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="d-flex gap-3 pt-4 border-top border-secondary">
+                <a href="https://www.linkedin.com/in/sergio-stuardo-bonilla-933430260/" target="_blank" class="btn btn-outline-light w-50"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/sstuardobonilla" target="_blank" class="btn btn-outline-light w-50"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container Wrapper -->
+    <main class="main-wrapper">
+
+        <!-- HERO SECTION (Estilo macOS Window Card) -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="window-card">
+                    
+                    <!-- macOS Traffic Light Dots -->
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">sergio-stuardo — bash</span>
+                    </div>
+
+                    <!-- Window Content -->
+                    <div class="window-body text-center">
+                        <h1 class="hero-title">
+                            Desarrollo aplicaciones web <span class="text-italic-accent">robustas</span>, escalables y eficientes.
+                        </h1>
+                        
+                        <p class="hero-subtitle text-muted-custom">
+                            Desarrollador Full Stack Java Trainee & Técnico Programador. Apasionado por la arquitectura backend, Spring Boot, servicios REST y soluciones orientadas a objetos.
+                        </p>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                            <a href="#proyectos" class="btn btn-custom-primary">Ver proyectos <i class="fa-solid fa-arrow-down ms-1"></i></a>
+                            <a href="#contacto" class="btn btn-custom-secondary">Contactarme</a>
+                        </div>
+
+                        <!-- Scroll Indicator -->
+                        <div class="scroll-down-indicator mt-5">
+                            <a href="#sobre-mi" aria-label="Ir a sección sobre mí"><i class="fa-solid fa-arrow-down animate-bounce"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="section-padding">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 text-center">
+                        <div class="profile-image-wrapper">
+                            <img src="assets/img/perfil/perfil.jpg" alt="Sergio Stuardo Bonilla" class="img-fluid profile-img" onerror="this.src='https://via.placeholder.com/400x500/1e222b/ffffff?text=Sergio+Stuardo';">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <span class="badge-custom">Sobre Mí</span>
+                        <h2 class="section-title mt-2">Apasionado por la tecnología y la lógica de programación</h2>
+                        <p class="text-muted-custom">
+                            Soy Técnico Programador y Desarrollador Full Stack Java Trainee. Mi enfoque se centra en crear componentes backend bien estructurados, mantenimiento de bases de datos relacionales e integración de interfaces modernas y funcionales.
+                        </p>
+                        <p class="text-muted-custom">
+                            Cuento con sólida capacidad analítica para resolver problemas complejos, adaptándome rápidamente a nuevos marcos de trabajo y metodologías ágiles de desarrollo.
+                        </p>
+
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6">
+                                <div class="info-box">
+                                    <i class="fa-solid fa-graduation-cap icon-gold"></i>
+                                    <h5>Título</h5>
+                                    <p class="text-muted-custom m-0">Técnico Programador</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="info-box">
+                                    <i class="fa-solid fa-code icon-gold"></i>
+                                    <h5>Especialidad</h5>
+                                    <p class="text-muted-custom m-0">Java, Spring Boot & Web</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES / TECNOLOGÍAS -->
+        <section id="habilidades" class="section-padding border-top-custom">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge-custom">Stack Técnico</span>
+                    <h2 class="section-title mt-2">Tecnologías & Herramientas</h2>
+                    <p class="text-muted-custom">Herramientas que utilizo para dar vida a los proyectos de software</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Java -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-brands fa-java tech-icon color-java"></i>
+                            <h4>Java</h4>
+                            <span class="tech-level">Programación Orientada a Objetos</span>
+                        </div>
+                    </div>
+
+                    <!-- Spring Boot -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-solid fa-leaf tech-icon color-spring"></i>
+                            <h4>Spring Boot</h4>
+                            <span class="tech-level">MVC & REST APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- HTML5 / CSS3 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-brands fa-html5 tech-icon color-html"></i>
+                            <h4>HTML5 & CSS3</h4>
+                            <span class="tech-level">Maquetación Web Responsive</span>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-brands fa-js tech-icon color-js"></i>
+                            <h4>JavaScript</h4>
+                            <span class="tech-level">Vanilla JS & DOM Manipulation</span>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-brands fa-python tech-icon color-python"></i>
+                            <h4>Python</h4>
+                            <span class="tech-level">Scripting & Lógica de Backend</span>
+                        </div>
+                    </div>
+
+                    <!-- SQL -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-solid fa-database tech-icon color-sql"></i>
+                            <h4>SQL & MySQL</h4>
+                            <span class="tech-level">Bases de Datos Relacionales</span>
+                        </div>
+                    </div>
+
+                    <!-- Bootstrap -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-brands fa-bootstrap tech-icon color-bootstrap"></i>
+                            <h4>Bootstrap 5</h4>
+                            <span class="tech-level">Diseño Móvil & Grid</span>
+                        </div>
+                    </div>
+
+                    <!-- Git & GitHub -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="tech-card">
+                            <i class="fa-brands fa-github tech-icon color-git"></i>
+                            <h4>Git & GitHub</h4>
+                            <span class="tech-level">Control de Versiones</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section id="experiencia" class="section-padding border-top-custom">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge-custom">Trayectoria</span>
+                    <h2 class="section-title mt-2">Experiencia Profesional</h2>
+                </div>
+
+                <div class="timeline-container">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="m-0">Desarrollador Full Stack Java Trainee</h4>
+                                <span class="timeline-date">Actualidad</span>
+                            </div>
+                            <h6 class="text-accent mb-3">Proyectos Independientes & Bootcamps</h6>
+                            <p class="text-muted-custom">
+                                Desarrollo de soluciones web completas aplicando la arquitectura Modelo-Vista-Controlador (MVC), persistencia de datos mediante Spring Data JPA y manejo de autenticación en backend.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge-tech">Java</span>
+                                <span class="badge-tech">Spring Boot</span>
+                                <span class="badge-tech">MySQL</span>
+                                <span class="badge-tech">Git</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="section-padding border-top-custom">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge-custom">Portafolio</span>
+                    <h2 class="section-title mt-2">Proyectos Destacados</h2>
+                    <p class="text-muted-custom">Selección de proyectos desarrollados con enfoque práctico y profesional</p>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <!-- Proyecto 1: Alke Wallet -->
+                    <div class="col-md-6">
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <img src="assets/img/proyectos/alke-wallet.jpg" alt="Alke Wallet" class="project-img" onerror="this.src='https://via.placeholder.com/600x350/1e222b/ffffff?text=Alke+Wallet';">
+                            </div>
+                            <div class="project-body">
+                                <h3>Alke Wallet</h3>
+                                <p class="text-muted-custom">
+                                    Simulación de billetera virtual que permite gestionar transacciones financieras, consultar saldos, realizar depósitos y transferencias de fondos entre cuentas.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge-tech">HTML5/CSS3</span>
+                                    <span class="badge-tech">JavaScript</span>
+                                    <span class="badge-tech">Bootstrap</span>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <a href="https://github.com/sstuardobonilla/alke-wallet" target="_blank" class="btn btn-custom-secondary w-100">
+                                        <i class="fa-brands fa-github me-1"></i> Ver en GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2: SpringEduManager -->
+                    <div class="col-md-6">
+                        <div class="project-card">
+                            <div class="project-img-wrapper">
+                                <img src="assets/img/proyectos/spring-edu.jpg" alt="SpringEduManager" class="project-img" onerror="this.src='https://via.placeholder.com/600x350/1e222b/ffffff?text=SpringEduManager';">
+                            </div>
+                            <div class="project-body">
+                                <h3>SpringEduManager</h3>
+                                <p class="text-muted-custom">
+                                    Sistema web de gestión académica backend desarrollado con Spring Framework. Maneja módulos de asignaturas, cursos, alumnos y control de accesos seguro.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge-tech">Java</span>
+                                    <span class="badge-tech">Spring Boot</span>
+                                    <span class="badge-tech">Spring Security</span>
+                                    <span class="badge-tech">MySQL</span>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <a href="https://github.com/sstuardobonilla/SpringEduManager" target="_blank" class="btn btn-custom-secondary w-100">
+                                        <i class="fa-brands fa-github me-1"></i> Ver en GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMACIÓN -->
+        <section id="formacion" class="section-padding border-top-custom">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge-custom">Educación</span>
+                    <h2 class="section-title mt-2">Formación Académica</h2>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <i class="fa-solid fa-graduation-cap icon-gold fs-3 mb-3"></i>
+                            <h4>Técnico Programador</h4>
+                            <p class="text-muted-custom">Formación técnica profesional enfocada en algoritmos, bases de datos, estructura de datos y desarrollo de software.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <i class="fa-solid fa-certificate icon-gold fs-3 mb-3"></i>
+                            <h4>Desarrollador Full Stack Java</h4>
+                            <p class="text-muted-custom">Capacitación intensiva práctica en tecnologías Java, ecosistema Spring Framework, desarrollo Frontend web y gestión de bases de datos relacionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="section-padding border-top-custom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5">
+                        <span class="badge-custom">Contacto</span>
+                        <h2 class="section-title mt-2">Iniciemos una conversación</h2>
+                        <p class="text-muted-custom">¿Tienes una consulta o te interesa sumar mi perfil a tu equipo laboral? Déjame un mensaje.</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form id="contactForm" class="contact-form p-4 p-md-5">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="correo" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control" id="asunto" placeholder="Motivo de tu mensaje" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-custom-primary w-100 py-3">Enviar Mensaje <i class="fa-solid fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom py-4 border-top-custom">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <p class="m-0 text-muted-custom fs-7">
+                © 2026 Sergio Stuardo Bonilla — Desarrollador Full Stack Java.
+            </p>
+            <div class="d-flex gap-3">
+                <a href="https://www.linkedin.com/in/sergio-stuardo-bonilla-933430260/" target="_blank" class="text-muted-custom hover-white"><i class="fa-brands fa-linkedin fs-5"></i></a>
+                <a href="https://github.com/sstuardobonilla" target="_blank" class="text-muted-custom hover-white"><i class="fa-brands fa-github fs-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn-back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
