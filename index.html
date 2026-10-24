@@ -351,31 +351,38 @@
         </section>
 
         <!-- FORMACIÓN -->
-        <section id="formacion" class="section-padding border-top-custom">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <span class="badge-custom">Educación</span>
-                    <h2 class="section-title mt-2">Formación Académica</h2>
-                </div>
+        
+<section id="formacion" class="section-padding border-top-custom">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge-custom">Educación</span>
+            <h2 class="section-title mt-2">Formación Académica</h2>
+        </div>
 
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6">
-                        <div class="info-card">
-                            <i class="fa-solid fa-graduation-cap icon-gold fs-3 mb-3"></i>
-                            <h4>Técnico Programador</h4>
-                            <p class="text-muted-custom">Formación técnica profesional enfocada en algoritmos, bases de datos, estructura de datos y desarrollo de software.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-card">
-                            <i class="fa-solid fa-certificate icon-gold fs-3 mb-3"></i>
-                            <h4>Desarrollador Full Stack Java</h4>
-                            <p class="text-muted-custom">Capacitación intensiva práctica en tecnologías Java, ecosistema Spring Framework, desarrollo Frontend web y gestión de bases de datos relacionales.</p>
-                        </div>
-                    </div>
+        <!-- Contenedor Flex directo para forzar lado a lado -->
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            
+            <!-- Tarjeta 1 -->
+            <div style="flex: 1; min-width: 280px; display: flex;">
+                <div class="info-card" style="width: 100%; display: flex; flex-direction: column;">
+                    <i class="fa-solid fa-graduation-cap icon-gold fs-3 mb-3"></i>
+                    <h4>Técnico Programador</h4>
+                    <p class="text-muted-custom">Formación técnica profesional enfocada en algoritmos, bases de datos, estructura de datos y desarrollo de software.</p>
                 </div>
             </div>
-        </section>
+
+            <!-- Tarjeta 2 -->
+            <div style="flex: 1; min-width: 280px; display: flex;">
+                <div class="info-card" style="width: 100%; display: flex; flex-direction: column;">
+                    <i class="fa-solid fa-certificate icon-gold fs-3 mb-3"></i>
+                    <h4>Desarrollador Full Stack Java</h4>
+                    <p class="text-muted-custom">Capacitación intensiva práctica en tecnologías Java, ecosistema Spring Framework, desarrollo Frontend web y gestión de bases de datos relacionales.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
         <!-- CONTACTO -->
         <section id="contacto" class="section-padding border-top-custom">
