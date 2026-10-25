@@ -380,18 +380,60 @@ header {
     visibility: visible;
 }
 
-/* Responsive Utilities */
 @media (max-width: 768px) {
-    .window-body {
-        padding: 40px 15px 30px 15px;
-    }
-    
-    .section-padding {
-        padding: 60px 0;
-    }
-    #formacion .row {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1.5rem !important;
-    }
+  .window-body {
+    padding: 40px 15px 30px 15px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+}
+
+/* Forzar que las tarjetas de Formación Académica estén siempre lado a lado */
+#formacion .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+/* Estilo para el contenedor del menú (Efecto cristal de macOS / Glassmorphism) */
+.offcanvas {
+  background: rgba(20, 20, 25, 0.92) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Transición suave para los enlaces del menú */
+.offcanvas-body .nav-link,
+.navbar-nav .nav-link {
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background-color 0.2s ease, 
+              color 0.2s ease,
+              padding-left 0.2s ease;
+  display: block;
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+/* Efecto HOVER estilo Dock de macOS */
+.offcanvas-body .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: scale(1.08) translateX(6px);
+}
+/* Forzar que todas las tarjetas de habilidades/stack tengan exactamente la misma altura */
+#habilidades .row > div,
+.tech-card-container {
+  display: flex !important;
+}
+
+#habilidades .info-card,
+.tech-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  width: 100% !important;
 }
