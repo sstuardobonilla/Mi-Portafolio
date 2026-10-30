@@ -437,36 +437,26 @@ header {
   height: 100% !important;
   width: 100% !important;
 }
-/* --- ESTILOS PARA EL MENÚ MÓVIL (CELULAR Y IPAD) --- */
+/* --- ESTILOS DEFINITIVOS PARA EL MENÚ MÓVIL --- */
 
-/* 1. Contenedor principal del menú desplegable en pantallas pequeñas */
-.mobile-menu, 
-.sidebar-menu, 
-.menu-desplegable { /* (Usa el nombre de clase exacto que tenga tu menú móvil en el HTML) */
-  padding: 24px 20px !important; /* Añade espacio para que no se pegue a la orilla izquierda */
+/* 1. Asegurar que el contenedor del menú móvil tenga espacio y no se pegue a la orilla */
+.mobile-menu-container, 
+.offcanvas, 
+.navbar-collapse { /* Agregamos las clases comunes que usa Bootstrap */
+  padding: 24px 20px !important;
   box-sizing: border-box;
 }
 
-/* 2. Convertir los enlaces del menú móvil en casillas idénticas a las del PC */
-.mobile-menu a, 
-.sidebar-menu a {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centra el texto igual que en tu PC */
-  padding: 12px 16px;
-  margin-bottom: 10px;      /* Espacio entre cada casilla */
-  background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil oscuro parecido al de tu PC */
-  border: 1px solid rgba(255, 255, 255, 0.1);  /* Borde sutil */
-  border-radius: 50px;      /* Si tus botones de PC son totalmente redondeados como píldoras, usa esto (o 12px si los prefieres rectangulares con esquinas suaves) */
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-}
-
-/* 3. Efecto al pasar el dedo o presionar en el celular */
-.mobile-menu a:active, 
-.mobile-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+/* 2. Reutilizar el estilo de tus "pill-item" (las casillas del PC) para el menú móvil */
+.mobile-menu-container .pill-item,
+.offcanvas .pill-item,
+.navbar-collapse .pill-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important; /* Espacio entre cada casilla */
+  width: 100% !important;
+  border-radius: 50px !important;  /* Mantiene la forma redondeada de píldora */
+  text-decoration: none !important;
 }
