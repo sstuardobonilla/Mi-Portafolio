@@ -460,3 +460,40 @@ header {
   border-radius: 50px !important;  /* Mantiene la forma redondeada de píldora */
   text-decoration: none !important;
 }
+/* --- FORZAR ESTILO DE CASILLAS EN EL MENÚ MÓVIL (BOOTSTRAP) --- */
+
+/* 1. Eliminar márgenes y rellenos extra de la lista del offcanvas */
+.offcanvas .navbar-nav {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 2. Convertir cada elemento de la lista en una casilla idéntica a la PC */
+.offcanvas .navbar-nav .nav-item {
+  width: 100% !important;
+  margin-bottom: 10px !important; /* Espacio entre cada casilla */
+}
+
+/* 3. Estilo directo de las casillas en los enlaces móviles */
+.offcanvas .navbar-nav .nav-link.mobile-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 12px 16px !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50px !important; /* Mantiene la forma redondeada */
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+/* 4. Efecto hover/active al presionar en el celular */
+.offcanvas .navbar-nav .nav-link.mobile-link:hover,
+.offcanvas .navbar-nav .nav-link.mobile-link:active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
