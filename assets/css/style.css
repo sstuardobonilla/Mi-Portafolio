@@ -506,3 +506,56 @@ header {
 .offcanvas .navbar-nav li {
   list-style-type: none !important;
 }
+/* --- DISEÑO AMIGABLE Y REDONDEADO PARA EL MENÚ MÓVIL --- */
+
+/* 1. Limpiar completamente los puntos y viñetas de Bootstrap */
+.offcanvas .navbar-nav {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* 2. Asegurar que los elementos de la lista no muestren puntos ocultos */
+.offcanvas .navbar-nav li,
+.offcanvas .navbar-nav .nav-item {
+  list-style: none !important;
+  list-style-type: none !important;
+  background: none !important;
+  width: 100% !important;
+  margin-bottom: 12px !important; /* Espacio cómodo entre cada casilla */
+}
+
+/* Eliminar explícitamente cualquier viñeta heredada */
+.offcanvas ul, 
+.offcanvas li {
+  list-style-image: none !important;
+  list-style: none !important;
+}
+
+/* 3. Estilo de "tarjetas / casillas" redondeadas y amigables */
+.offcanvas .navbar-nav .nav-link.mobile-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 14px 20px !important;
+  background-color: rgba(255, 255, 255, 0.06) !important; /* Fondo sutil elegante */
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;     /* Borde delicado */
+  border-radius: 16px !important; /* Esquinas redondeadas suaves y modernas */
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+  transition: all 0.25s ease-in-out !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important; /* Sombra ligera flotante */
+}
+
+/* Efecto al presionar o tocar en el celular */
+.offcanvas .navbar-nav .nav-link.mobile-link:hover,
+.offcanvas .navbar-nav .nav-link.mobile-link:active {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.02); /* Pequeño efecto de expansión al tacto */
+}
