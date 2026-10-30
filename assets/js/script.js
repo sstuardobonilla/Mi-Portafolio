@@ -67,5 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.reset();
         });
     }
+    // Cerrar el menú móvil automáticamente al hacer clic en un enlace
+document.querySelectorAll('.offcanvas .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const offcanvasElement = document.getElementById('offcanvasNavbar'); // O el ID real de tu offcanvas
+        if (offcanvasElement) {
+            // Usa la API de Bootstrap para ocultar el menú
+            const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (bsOffcanvas) {
+                bsOffcanvas.hide();
+            }
+        }
+    });
+});
 
 });

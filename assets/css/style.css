@@ -497,3 +497,12 @@ header {
   background-color: rgba(255, 255, 255, 0.15) !important;
   border-color: rgba(255, 255, 255, 0.3) !important;
 }
+/* Eliminar los puntos o viñetas de la lista en el menú móvil */
+.offcanvas .navbar-nav {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.offcanvas .navbar-nav li {
+  list-style-type: none !important;
+}
